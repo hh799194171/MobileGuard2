@@ -1,5 +1,6 @@
 package cn.edu.gdmec.android.mobileguard.m2theftguard.adapter;
 
+
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,21 +12,19 @@ import java.util.List;
 import cn.edu.gdmec.android.mobileguard.R;
 import cn.edu.gdmec.android.mobileguard.m2theftguard.entity.ContactInfo;
 
-import static android.R.attr.id;
-
 /**
- * Created by asus on 2017/10/22.
+ * Created by Administrator on 2017/10/19 0019.
  */
 
-public class ContactAdapter extends BaseAdapter {
-    private List<ContactInfo>contactInfos;
+public class ContactAdapter extends BaseAdapter{
+    private List<ContactInfo> contactInfos;
     private Context context;
     public ContactAdapter(List<ContactInfo> contactInfos,Context context){
         super();
-        this.contactInfos=contactInfos;
-        this.context=context;
-
+        this.contactInfos = contactInfos;
+        this.context = context;
     }
+
     @Override
     public int getCount() {
         return contactInfos.size();
@@ -43,17 +42,15 @@ public class ContactAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-       ViewHolder holder=null;
-        if(view==null){
-            view =View.inflate(context, R.layout.item_list_contact_select,null);
-            holder =new ViewHolder();
-            holder.mNameTV=(TextView) view.findViewById(R.id.tv_name);
-            holder.mPhoneTV=(TextView) view.findViewById(R.id.tv_phone);
+        ViewHolder holder = null;
+        if(view == null){
+            view = View.inflate(context, R.layout.item_list_contact_select,null);
+            holder = new ViewHolder();
+            holder.mNameTV = (TextView) view.findViewById(R.id.tv_name);
+            holder.mPhoneTV = (TextView) view.findViewById(R.id.tv_phone);
             view.setTag(holder);
-
         }else{
-            holder=(ViewHolder)view.getTag();
-
+            holder = (ViewHolder) view.getTag();
         }
         holder.mNameTV.setText(contactInfos.get(i).name);
         holder.mPhoneTV.setText(contactInfos.get(i).phone);

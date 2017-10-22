@@ -1,32 +1,22 @@
-package cn.edu.gdmec.android.mobileguard.m2theftguard.utils;
+package cn.edu.gdmec.android.mobileguard.m2theftguard;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
 import cn.edu.gdmec.android.mobileguard.R;
 
-/**
- * Created by 11388 on 2017/10/12.
- */
-
-public class LostFindActivity extends AppCompatActivity{
+public class LostFindActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lost_find);
-        startSetup1Activity();
+        startSetUp1Activity();
     }
-
-
-    private void startSetup1Activity(){
+    private void startSetUp1Activity(){
         Intent intent = new Intent(LostFindActivity.this,Setup1Activity.class);
         startActivity(intent);
         finish();
     }
-
-
-
-
 }
