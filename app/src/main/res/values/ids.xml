@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="btn_addcontact" type="id" />
+    <item name="togglebtn_securityfunction" type="id" />
 </resources>

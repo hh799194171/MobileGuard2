@@ -36,7 +36,7 @@ public class SmsLostFindReceiver extends BroadcastReceiver {
                 SmsMessage smsManager = SmsMessage.createFromPdu((byte[] )obj);
                 String sender=smsManager.getOriginatingAddress();
                 if (sender.startsWith("+86")){
-                    sender=sender.substring(3,sender,length());
+                    sender=sender.substring(3,sender.length());
                 }
                 String body = smsManager.getMessageBody();
                 String safephone=sharedPreferences.getString("safephone",null);
