@@ -1,7 +1,7 @@
 package cn.edu.gdmec.android.mobileguard.m3communicationguard.entity;
 
 /**
- * Created by asus on 2017/11/5.
+ * Created by Administrator on 2017/10/31 0031.
  */
 
 public class BlackContactInfo {
@@ -9,15 +9,14 @@ public class BlackContactInfo {
     public String contactName;
     public int mode;
     public String getModeString(int mode){
-        switch(mode){
+        switch (mode){
             case 1:
                 return "电话拦截";
             case 2:
                 return "短信拦截";
             case 3:
                 return "电话、短信拦截";
-
         }
-    return "";
+        return "";
     }
 }
