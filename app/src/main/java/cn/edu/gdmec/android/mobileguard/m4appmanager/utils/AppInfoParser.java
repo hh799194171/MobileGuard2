@@ -18,7 +18,7 @@ import cn.edu.gdmec.android.mobileguard.m4appmanager.entity.AppInfo;
 
 /**
  * Created by Administrator on 2017/11/7.
- */
+ *///1
 
 public class AppInfoParser {
     public static List<AppInfo> getAppInfos(Context context){
