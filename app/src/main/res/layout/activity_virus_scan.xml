@@ -58,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="1.0px"
             android:background="@color/black30"
-            android:layout_alignParentBottom="true"
-            />
+            android:layout_alignParentBottom="true"/>
+        //aaa
     </RelativeLayout>
 </LinearLayout>
