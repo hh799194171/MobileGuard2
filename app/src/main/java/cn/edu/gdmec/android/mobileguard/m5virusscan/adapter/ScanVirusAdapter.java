@@ -7,11 +7,10 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
 
-import cn.edu.gdmec.android.mobileguard.m5virusscan.entity.ScanAppinfo;
+import cn.edu.gdmec.android.mobileguard.R;
+import cn.edu.gdmec.android.mobileguard.m5virusscan.entity.ScanAppInfo;
 
 
 /**
@@ -19,9 +18,9 @@ import cn.edu.gdmec.android.mobileguard.m5virusscan.entity.ScanAppinfo;
  */
 
 public class ScanVirusAdapter extends BaseAdapter {
-    private List<ScanAppinfo> mScanAppInfos;
+    private List<ScanAppInfo> mScanAppInfos;
     private Context context;
-    public ScanVirusAdapter(List<ScanAppinfo> scanAppinfos,Context context){
+    public ScanVirusAdapter(List<ScanAppInfo> scanAppinfos, Context context){
         super();
         mScanAppInfos = scanAppinfos;
         this.context=context;
@@ -53,14 +52,14 @@ public class ScanVirusAdapter extends BaseAdapter {
         if (view == null){
             view = View.inflate(context, R.layout.item_list_applock,null);
             holder = new ViewHolder();
-            holder.mAppIconImgv=(ImageView) view.findViewById(R.id.img_appicon);
+            holder.mAppIconImgv=(ImageView) view.findViewById(R.id.imgv_appicon);
             holder.mAppNameTv=(TextView) view.findViewById(R.id.tv_appname);
             holder.mScanIconImgv=(ImageView) view.findViewById(R.id.imgv_lock);
             view.setTag(holder);
         }else{
             holder = (ViewHolder) view.getTag();
         }
-        ScanAppinfo scanAppinfo = mScanAppInfos.get(i);
+        ScanAppInfo scanAppinfo = mScanAppInfos.get(i);
         if (!scanAppinfo.isVirus){
             holder.mScanIconImgv.setBackgroundResource(R.drawable.blue_right_icon);
             holder.mAppNameTv.setTextColor(context.getResources().getColor(R.color.black));
