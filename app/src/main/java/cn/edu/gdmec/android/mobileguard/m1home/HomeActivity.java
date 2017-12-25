@@ -76,6 +76,7 @@ public class HomeActivity extends AppCompatActivity {
                     case 7:
                         startActivity(AdvancedToolsActivity.class);
                         break;
+                    //222
                 }
             }
         });
